@@ -1,0 +1,11 @@
+public abstract class Operator{
+    
+    
+    //This returns the precedence of the operator
+    public abstract int getPrecedence();
+    
+    //This returns the result of the operation
+    public abstract double evaluate(double a, double b);
+}
+    
+    
