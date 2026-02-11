@@ -1,0 +1,78 @@
+from turtle import Turtle, Screen
+
+#we have to create a dashed line for 10 paces and 10 paces gap and will repeat it for 50 times
+#use a for loop for 50 times
+#initialize a turtle
+dodo = Turtle()
+
+#for i in range(50):
+#    dodo.forward(10)
+#    # we will use penup so it doesnt draw
+#    dodo.penup()
+#    dodo.forward(10)
+#    dodo.pendown()
+
+
+#we will draw a triangle
+#for i in range(3):
+#    dodo.forward(100)
+#    dodo.right(120)
+
+#we will draw a square
+#for i in range(4):
+#    dodo.forward(100)
+#    dodo.right(90)
+
+#we will draw a star
+#for i in range(5):
+#    dodo.forward(100)
+#    dodo.right(144)
+
+#we will draw a pentagon
+#for i in range(5):
+#    dodo.forward(100)
+#    dodo.right(72)
+
+#we will draw a hexagon
+#for i in range(6):
+#  dodo.forward(100)
+#    dodo.right(60)
+
+#we will draw a heptagon
+#for i in range(7):
+#    dodo.forward(100)
+#    dodo.right(360/7)
+
+#we will draw a octagon
+#for i in range(8):
+#    dodo.forward(100)
+#    dodo.right(45)
+
+#we will draw a nonagon
+#for i in range(9):
+#    dodo.forward(100)
+#    dodo.right(40)
+
+#we will draw a decagon
+#for i in range(10):
+#    dodo.forward(100)
+#    dodo.right(36)
+
+#write this in the form of method
+def draw_shape(num_sides):
+    for i in range(num_sides):
+        dodo.forward(100)
+        dodo.right(360/num_sides)
+
+draw_shape(6)
+
+
+
+
+
+
+
+
+
+
+Screen().exitonclick()
