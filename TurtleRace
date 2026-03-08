@@ -1,0 +1,47 @@
+from turtle import Turtle, Screen
+import random
+
+dodo = Turtle()
+screen = Screen()
+screen.setup(750, 500)
+user_bet = screen.textinput("Make your bet", "Which turtle will win the race?")
+print(user_bet)
+
+#make a color array
+COLORS = ["red", "blue", "green", "yellow", "purple", "pink"]
+y_position = [-70, -40, -10, 20, 50, 80]
+
+turtles = []
+#make the turtles
+for i in range(0,6):
+    dodo = Turtle(shape = "turtle")
+    dodo.color(COLORS[i])
+    dodo.penup()
+    dodo.goto(-300, y_position[i])
+    turtles.append(dodo)
+
+is_race_on = True
+winner_color = None
+while is_race_on:
+    for turtle in turtles:
+        #move forward randomly
+        turtle.forward(random.randint(1,10))
+        if turtle.xcor() >= 300:
+            is_race_on = False
+            winner_color = turtle.pencolor()
+
+            announcer = Turtle()
+            announcer.hideturtle()
+            announcer.penup()
+            announcer.goto(-100,100)
+
+
+            if user_bet == winner_color:
+                announcer.write(f"You won! The {winner_color} turtle won the race", "center", font = ("Arial", 16,))
+            else:
+                announcer.write(f"You lost! The {winner_color} turtle won the race", "center", font = ("Arial", 16,))
+            break
+
+
+screen.exitonclick()
+
