@@ -1,0 +1,36 @@
+import random
+import turtle as t
+
+t.colormode(255)
+dodo = t.Turtle()
+
+
+#colors = ["Red", "Blue", "Green", "Black", "Purple", "Grey", "SeaGreen", "DarkOrchid", "IndianRed", "DeepSkyBlue"]
+directions = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 150, 160, 180, 270]
+
+#we will give a random rgb value to it now
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    random_color = (r, g, b)
+    return random_color
+
+
+dodo.pensize(10)
+dodo.speed('fastest')
+dodo.penup()
+dodo.right(90)
+dodo.forward(200)
+dodo.pendown()
+
+for i in range(200):
+    #we are calling the method here
+    dodo.color(random_color())
+    dodo.forward(20)
+    dodo.setheading(random.choice(directions))
+
+Screen().exitonclick()
+
+
+
