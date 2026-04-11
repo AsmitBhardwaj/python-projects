@@ -16,6 +16,7 @@ with open("names2.txt") as n2:
 
 sames_names = [name for name in names1 if name in names2]
 print(sames_names)
+print(sames_names)
 
 
 
